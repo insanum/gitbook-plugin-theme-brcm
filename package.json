@@ -1,12 +1,12 @@
 {
-  "name": "gitbook-plugin-theme-default",
-  "description": "Default theme for GitBook",
+  "name": "gitbook-plugin-theme-brcm",
+  "description": "Broadcom theme for GitBook",
   "main": "./index.js",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "engines": {
     "gitbook": ">=3.0.0"
   },
-  "dependencies": {},
+  "dependencies": { },
   "devDependencies": {
     "browserify": "13.1.0",
     "eslint": "3.6.1",
@@ -25,17 +25,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GitbookIO/theme-default.git"
+    "url": "https://github.com/insanum/gitbook-plugin-theme-brcm.git"
   },
   "author": "FriendCode Inc. <contact@gitbook.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/GitbookIO/theme-default/issues"
+    "url": "https://github.com/insanum/gitbook-plugin-theme-brcm/issues"
   },
   "contributors": [
     {
       "name": "Samy Pessé",
       "email": "samy@gitbook.com"
+    },
+    {
+      "name": "Eric Davis",
+      "email": "edavis@insanum.com"
     }
   ],
   "gitbook": {

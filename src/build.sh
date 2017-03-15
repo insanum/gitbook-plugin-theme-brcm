@@ -28,3 +28,10 @@ cp -R node_modules/font-awesome/fonts/ _assets/website/fonts/fontawesome/
 mkdir -p _assets/website/images
 cp node_modules/gitbook-logos/output/favicon.ico _assets/website/images/
 cp node_modules/gitbook-logos/output/apple-touch-icon-152.png _assets/website/images/apple-touch-icon-precomposed-152.png
+
+# Copy brcm assets
+mkdir -p _assets/website/images
+cp -R src/brcm/images/* _assets/website/images
+mkdir -p _assets/website/js
+cp -R src/brcm/js/* _assets/website/js
+

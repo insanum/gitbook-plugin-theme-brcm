@@ -1,0 +1,104 @@
+
+@monofont: "Droid Sans Mono", "Roboto Mono", "Lucida Console", monospace;
+@normalfont: sans-serif;
+
+@brcm_color: rgb(204,32,48);
+@grey: rgb(239,239,239);
+@dgrey: darken(@grey, 10%);
+
+a {
+    font-weight: 500 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: @brcm_color !important;
+    text-decoration: underline !important;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.book-header {
+    /* don't want this header */
+    height: 0;
+}
+
+a.btn.pull-left.js-toolbar-action {
+    /* make sure this pops on top of the 0px height header */
+    z-index: 100;
+}
+
+.summary a {
+    color: black !important;
+}
+
+.summary a:hover {
+    color: @brcm_color !important;
+}
+
+.summary *.active>a {
+    color: #008cff !important;
+}
+
+.page-inner {
+    margin: 10px 20px 0px 20px;
+}
+
+.markdown-section code,
+.markdown-section pre,
+.markdown-section pre>code {
+    font-family: @monofont;
+    font-size: .90em;
+    line-height: 1.2;
+    background-color: #efefef;
+}
+
+.markdown-section blockquote {
+    color: #404040;
+    font-size: .90em;
+    line-height: 1.2;
+}
+
+.brcm-logo {
+    background-color: #ffffff;
+    height: 50px;
+}
+
+.brcm-logo img {
+    display: block;
+    margin: auto;
+}
+
+.book-summary {
+    background-color: @grey;
+}
+
+.image-wrapper {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.changelog {
+    font-size: smaller;
+    text-align: center;
+}
+.changelog tr td:nth-child(1) {
+    font-weight: bold;
+}
+.changelog tr td:nth-child(4) {
+    text-align: left;
+}
+
+.mermaid {
+    text-align: center;
+}
+
+.mermaid * {
+    font-size: 14px;
+}
+
+@import "data.less";
+@import "snip.less";
+

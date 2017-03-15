@@ -24,12 +24,21 @@
         <script src="{{ resource.path|resolveAsset }}"></script>
         {% endif %}
     {% endfor %}
+
+    <script src="{{ "js/jquery-ui.min.js"|resolveAsset }}"></script>
+    <script>
+    $(function() { $(document).tooltip({track: true}); });
+    </script>
+
 {% endblock %}
 
 {% block body %}
 <div class="book">
     <div class="book-summary">
         {% block book_sidebar %}
+            <div class="brcm-logo">
+                <a href="./"><img src="{{ "images/broadcom_logo.png"|resolveAsset }}" /></a>
+            </div>
             {% block search_input %}{% endblock %}
             {% block book_summary %}
                 <nav role="navigation">
@@ -60,6 +69,7 @@
             </div>
 
             {% block book_navigation %}
+	      {###
                 {% if page.previous and page.previous.path %}
                 <a href="{{ page.previous.path|resolveFile }}{{ page.previous.anchor }}" class="navigation navigation-prev {% if not (page.next and page.next.path) %}navigation-unique{% endif %}" aria-label="Previous page: {{ page.previous.title }}">
                     <i class="fa fa-angle-left"></i>
@@ -70,6 +80,7 @@
                     <i class="fa fa-angle-right"></i>
                 </a>
                 {% endif %}
+	      ###}
             {% endblock %}
         {% endblock %}
     </div>
@@ -82,3 +93,4 @@
     </script>
 </div>
 {% endblock %}
+

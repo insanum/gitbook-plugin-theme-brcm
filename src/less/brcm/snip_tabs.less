@@ -1,0 +1,12 @@
+
+.snip_tabs(@tab_prefix,
+           @content_prefix,
+           @cnt, @i: 0) when (@i < @cnt) {
+  .snip #@{tab_prefix}@{i}:checked ~ #@{content_prefix}@{i} {
+      display: block;
+  }
+  .snip_tabs(@tab_prefix,
+             @content_prefix,
+             @cnt, (@i + 1));
+}
+

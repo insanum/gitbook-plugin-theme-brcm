@@ -1,0 +1,75 @@
+
+.snip {
+  padding: 30px 0;
+  margin: 0 auto;
+}
+
+.snip section {
+  display: none;
+  padding: 10px;
+  border: 1px solid @brcm_color;
+  background-color: #f8f8f8;
+}
+
+.snip section code,
+.snip section pre,
+.snip section pre code {
+  font-family: @monofont;
+  font-size: .92em;
+  line-height: 1.2;
+  background-color: #f8f8f8;
+  padding: 0;
+  margin: 0;
+}
+
+/* uncomment this block to enable a fixed height box with scrollbars */
+/*
+.snip section pre code {
+  height: 300px;
+  overflow: scroll;
+}
+*/
+
+.snip input {
+  display: none;
+}
+
+.snip label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 2px 20px 10px 20px;
+  color: @brcm_color;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.snip label:hover {
+  cursor: pointer;
+}
+
+.snip label:before {
+  //content: '\25a1';
+  //content: '\25b8';
+  content: '\25fa';
+  font-size: .80em;
+  font-weight: normal;
+  margin-right: 3px;
+}
+
+.snip input + label {
+  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid @brcm_color;
+  background-color: #fff;
+}
+
+.snip input:checked + label {
+  border: 1px solid @brcm_color;
+  border-top: 6px solid @brcm_color;
+  border-bottom: 1px solid #f8f8f8; /* bg color for transparent */
+  background-color: #f8f8f8;
+}
+
+@import "snip_tabs.less";
+
