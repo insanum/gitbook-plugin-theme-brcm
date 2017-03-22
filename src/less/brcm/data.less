@@ -14,8 +14,8 @@
     background-color: @grey;
     font-family: @monofont;
     font-size: .75em;
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 0 auto !important;
     padding: 0;
 
     * {
@@ -142,8 +142,8 @@
     //background-color: @grey;
     //font-family: @monofont;
     font-size: .80em;
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
+    margin: 0 auto !important;
     padding: 0;
 
     * {
@@ -269,7 +269,17 @@
 
         list-style: none;
         margin: 0;
-        padding: 0 0 15px 10px;
+        padding: 0 0 10px 20px;
+
+        li:before {
+            //content: '\25a1';
+            //content: '\25b8';
+            content: '\25fa';
+            font-size: .80em;
+            margin-right: 6px;
+            color: @brcm_color;
+            font-weight: bold;
+        }
     }
 }
 
