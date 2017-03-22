@@ -1,10 +1,5 @@
 
-@monofont: "Droid Sans Mono", "Roboto Mono", "Lucida Console", monospace;
-@normalfont: sans-serif;
-
-@brcm_color: rgb(204,32,48);
-@grey: rgb(239,239,239);
-@dgrey: darken(@grey, 10%);
+@import "base.less";
 
 .page .section code,
 .page .section pre,
@@ -16,6 +11,7 @@
 }
 
 .page .section blockquote {
+    border-left: 1px solid @brcm_color;
     color: #404040;
     font-size: .95em;
     line-height: 1.4;

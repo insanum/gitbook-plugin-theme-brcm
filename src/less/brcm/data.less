@@ -175,6 +175,7 @@
     border-left: 1px solid @brcm_color;
     border-right: 1px solid @brcm_color;
     border-bottom: 1px solid @brcm_color;
+    background-color: #fff;
     width: 100%;
 
     display: -webkit-box;
@@ -189,7 +190,7 @@
     }
 
     .dt_row_header {
-        background-color: @dgrey;
+        background-color: @dgrey !important;
         font-family: @normalfont !important;
         font-weight: bold;
     }
@@ -227,26 +228,94 @@
     font-size: .70em;
 }
 
-.multi_column_list {
+.multi_column_object_list {
     border: 1px solid @dgrey;
     width: 90%;
     margin: 0 auto;
     padding: 10px 20px;
+    font-size: .90em;
 
     ul {
         -moz-column-rule: 1px solid @dgrey;
-        -moz-column-count: 3;
-        -moz-column-gap: 2em;
         -webkit-column-rule: 1px solid @dgrey;
-        -webkit-column-count: 3;
-        -webkit-column-gap: 2em;
         column-rule: 1px solid @dgrey;
+
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
         column-count: 3;
+
+        -moz-column-gap: 2em;
+        -webkit-column-gap: 2em;
         column-gap: 2em;
 
         list-style: none;
         margin: 0;
         padding: 0;
     }
+}
+
+.multi_column_attribute_list {
+    display: inline-block;
+    font-size: .90em;
+
+    ul {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+
+        -moz-column-gap: 2em;
+        -webkit-column-gap: 2em;
+        column-gap: 2em;
+
+        list-style: none;
+        margin: 0;
+        padding: 0 0 15px 10px;
+    }
+}
+
+.data_field_block {
+    border: 1px solid @ddgrey;
+    border-left: 2px solid @brcm_color;
+    padding: 0px 10px 10px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: @grey;
+
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 10px 0 5px 0 !important;
+    }
+}
+
+.dataBaseHR() {
+    background-color: @brcm_color !important;
+    height: 3px !important;
+    margin: 10px auto !important;
+    margin-top: 50px !important;
+}
+
+.data_hr_wide {
+    .dataBaseHR();
+    width: 60% !important;
+}
+
+.data_hr_normal {
+    .dataBaseHR();
+    width: 30% !important;
+}
+
+.data_hr_narrow {
+    .dataBaseHR();
+    width: 10% !important;
+}
+
+.page-inner hr:first-of-type {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
 }
 
