@@ -1,5 +1,6 @@
 {% macro articles(_articles) %}
     {% for article in _articles %}
+        {% set level = article.level.match(r/^([0-9]+)\.1([\.0-9]*)$/) %}
         <li class="chapter {% if article.path == file.path and not article.anchor %}active{% endif %}" data-level="{{ article.level }}" {% if article.path %}data-path="{{ article.path|resolveFile }}"{% endif %}>
             {% if article.path and getPageByPath(article.path) %}
                 <a href="{{ article.path|resolveFile }}{{ article.anchor }}">
@@ -8,8 +9,8 @@
             {% else %}
                 <span>
             {% endif %}
-                    {% if article.level != "0" and config.pluginsConfig['theme-brcm'].showLevel %}
-                        <b>{{ article.level }}.</b>
+                    {% if article.level != "0" and config.pluginsConfig['theme-brcm'].noLevel == false %}
+                        <span class="header_level">{{ level[1] }}{{ level[2] }}.</span>
                     {% endif %}
                     {{ article.title }}
             {% if article.path  or article.url %}

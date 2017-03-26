@@ -2,11 +2,13 @@
   "name": "gitbook-plugin-theme-brcm",
   "description": "Broadcom theme for GitBook",
   "main": "./index.js",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "engines": {
     "gitbook": ">=3.0.0"
   },
-  "dependencies": { },
+  "dependencies": {
+    "lodash": "^3.10.0"
+  },
   "devDependencies": {
     "browserify": "13.1.0",
     "eslint": "3.6.1",
@@ -74,9 +76,9 @@
           }
         }
       },
-      "showLevel": {
+      "noLevel": {
         "type": "boolean",
-        "title": "Show level indicator in TOC",
+        "title": "Don't show the level indicator in TOC",
         "default": false
       }
     }
