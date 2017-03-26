@@ -15,8 +15,10 @@ function generateSectionNumbers(content, section) {
 
         if (rgx[1].length > chapter.length) {
             /* new level, add a new sub-section */
-            if (rgx[1].length !== (chapter.length + 1))
-                err(`invalid header level jump ("${l}")`);
+            if (rgx[1].length !== (chapter.length + 1)) {
+                console.log(`ERROR: invalid header level jump ("${l}")`);
+                process.exit(1);
+            }
             chapter.push((chapter.length == 0) ? section : 1);
         } else if (rgx[1].length == chapter.length) {
             /* same level, increase current section number */
@@ -37,16 +39,22 @@ function generateSectionNumbers(content, section) {
     return s;
 }
 
+var injectLevels = false;
+
 module.exports = {
     hooks: {
         config: function(config) {
+            if (config.pluginsConfig['theme-brcm'].noLevel == false)
+                injectLevels = true;
             config.styles = config.styles || config.pluginsConfig['theme-brcm'].styles;
 
             return config;
         },
         'page:before': function(page) {
-            var section = page.level.match(/^([0-9]+)\..*$/)[1];
-            page.content = generateSectionNumbers(page.content, section);
+            if (injectLevels) {
+                var section = page.level.match(/^([0-9]+)\..*$/)[1];
+                page.content = generateSectionNumbers(page.content, section);
+            }
             return page;
         }
     }

@@ -31,15 +31,28 @@ a.btn.pull-left.js-toolbar-action {
     z-index: 100;
 }
 
+.header_level {
+    font-size: .90em;
+    font-weight: normal;
+}
+
 .summary a {
     color: black !important;
 }
 
-.summary a:hover {
+.summary a .header_level {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.summary a:hover,
+.summary a:hover .header_level {
     color: @brcm_color !important;
 }
 
-.summary *.active>a {
+.summary *.active>a,
+.summary *.active>a .header_level {
     color: #008cff !important;
 }
 
@@ -103,17 +116,6 @@ a.btn.pull-left.js-toolbar-action {
 
 .mermaid * {
     font-size: 14px;
-}
-
-.header_level {
-    font-size: .90em;
-    font-weight: normal;
-}
-
-.summary .header_level {
-    display: inline !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 @import "data.less";
