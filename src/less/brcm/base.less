@@ -115,9 +115,28 @@ a.btn.pull-left.js-toolbar-action {
 }
 .changelog tr td:nth-child(3) {
     white-space: nowrap;
+    text-align: left;
 }
 .changelog tr td:nth-child(4) {
     text-align: left;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li:before {
+            content: '\25fa';
+            font-size: .80em;
+            margin-right: 6px;
+            color: @brcm_color;
+            font-weight: bold;
+        }
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+    }
 }
 
 @import "data.less";
