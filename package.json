@@ -7,7 +7,7 @@
     "gitbook": ">=3.0.0"
   },
   "dependencies": {
-    "lodash": "^3.10.0"
+    "lodash": "3.10.0"
   },
   "devDependencies": {
     "browserify": "13.1.0",
