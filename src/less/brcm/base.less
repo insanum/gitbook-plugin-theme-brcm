@@ -21,14 +21,9 @@ p {
     line-height: 1.5;
 }
 
-.book-header {
-    /* don't want this header */
-    height: 0;
-}
-
-a.btn.pull-left.js-toolbar-action {
-    /* make sure this pops on top of the 0px height header */
-    z-index: 100;
+h1>p, h2>p, h3>p, h4>p, h5>p, h6>p {
+    margin: 0;
+    padding: 0;
 }
 
 .header_level {
@@ -61,7 +56,13 @@ a.btn.pull-left.js-toolbar-action {
 }
 
 .page-inner {
-    margin: 10px 20px 0px 20px;
+    margin: 10px 10px 10px 20px;
+    padding: 0;
+}
+
+// this removes top margin from generated markdown content wrapped with a div
+.markdown-section>:first-child>:first-child {
+    margin-top: 0 !important;
 }
 
 .markdown-section code,
